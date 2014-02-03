@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Torrent Search</title>
+</head>
+<body>
+<center><h1>Torrent Search</h1>
+<form action="search" method="POST">
+<input name="search_term"><input type="submit" value="Find">
+</form>
+<h2>Search Results</h2>
+{% for item in feed %}
+<a href="{{ item.link }}">{{ item.title }}</a><br>
+<br>
+{% endfor %}
+</center>
+</body>
+</html>
